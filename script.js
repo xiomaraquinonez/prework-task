@@ -48,11 +48,11 @@ function stopGame(){
 // Sound Synthesis Functions
 const freqMap = {
   1: 261.6,
-  2: 329.6,
-  3: 392,
+  2: 320,
+  3: 397,
   4: 466.2,
   5: 310.5,
-  6: 460
+  6: 450
 }
 
 // plays a tone for the amount of time specified
@@ -158,16 +158,16 @@ function guess(btn){
  }else{
   //Guess was incorrect
   //GAME OVER: LOSE!
-  
     if (strikes < 2){
        strikes++;
     }
- 
-    loseGame();
+    else{
+      loseGame();
+    }
   }
 }
 
 //function to generate a random pattern
 function randomPattern(max) {
- return Math.floor(Math.random() * Math.floor(max) + 1);
+  return Math.floor(Math.random() * Math.floor(max) + 1);
 }
